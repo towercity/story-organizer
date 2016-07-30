@@ -1,6 +1,7 @@
 export class Story {
   id: number;
-  title: string;
+  title: string
+  desc: string;
   status: string;
   series: string;
 }
