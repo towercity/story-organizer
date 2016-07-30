@@ -19,14 +19,14 @@ export var STORIES: Story[] = [
   {
     id: 03,
     title: 'Songs About Men',
-    desc: '',
+    desc: 'Lost family gets caught up in racist Konig family drama; reflections on the beautiful future of Detroit',
     status: 'Working',
     series: ['Corn', 'Three Sentimental Novellas']
   },
   {
     id: 04,
     title: 'Rhesus Macaque',
-    desc: '',
+    desc: 'When you die in St. Pete, you die in real life',
     status: 'To Write',
     series: 'Three Sentimental Novellas'
   }
