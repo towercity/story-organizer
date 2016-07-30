@@ -25,7 +25,8 @@ var ListComponent = (function () {
         core_1.Component({
             selector: 'list-view',
             //styleUrls:  ['styles/list.component.css'],
-            templateUrl: 'templates/list.component.html'
+            templateUrl: 'templates/list.component.html',
+            providers: [story_service_1.StoryService]
         }), 
         __metadata('design:paramtypes', [story_service_1.StoryService])
     ], ListComponent);

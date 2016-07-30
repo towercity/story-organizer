@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var story_service_1 = require('./story.service');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Story Organizer';
@@ -21,7 +22,9 @@ var AppComponent = (function () {
             template: "\n    <h1>{{title}} - {{author}}</h1>\n    <router-outlet></router-outlet>\n  ",
             //styleUrls: ['styles/app.component.css'],
             directives: [router_1.ROUTER_DIRECTIVES],
-            providers: []
+            providers: [
+                story_service_1.StoryService
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

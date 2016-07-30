@@ -6,7 +6,8 @@ import { StoryService } from './story.service';
 @Component({
   selector: 'list-view',
   //styleUrls:  ['styles/list.component.css'],
-  templateUrl: 'templates/list.component.html'
+  templateUrl: 'templates/list.component.html',
+  providers: [StoryService]
 })
 
 export class ListComponent implements OnInit {
