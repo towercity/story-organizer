@@ -1,6 +1,11 @@
-<ul (click)="log(stories)">
-  <li *ngFor="let story of stories">
-  {{story.title}}
-  </li>
-</ul>
-<div (click)="log(ids)">{{ids.status}}</div>
+<div *ngFor="let status of ids.status; let idx = index">
+  <h2>{{status}}</h2>
+  <p>{{status.index}}</p>
+  <ul>
+    <span *ngFor="let story of stories">
+      <li *ngIf="story.status == idx">
+      {{story.title}}
+      </li>
+    </span>
+  </ul>
+</div>
