@@ -1,5 +1,6 @@
-<ul>
+<ul (click)="log(stories)">
   <li *ngFor="let story of stories">
   {{story.title}}
   </li>
 </ul>
+<div (click)="log(ids)">{{ids.status}}</div>

@@ -10,16 +10,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var story_service_1 = require('./story.service');
+var temp_stories_1 = require('./temp-stories');
 var ListComponent = (function () {
     function ListComponent(storyService) {
         this.storyService = storyService;
+        //TODO: Fix how IDs are imported--b/c this is very improper
+        this.ids = temp_stories_1.LIST_IDS;
     }
+    ListComponent.prototype.log = function (info) {
+        console.log(info);
+    };
     ListComponent.prototype.getStories = function () {
         var _this = this;
         this.storyService.getStories().then(function (stories) { return _this.stories = stories; });
     };
+    ListComponent.prototype.getIDs = function () {
+        var _this = this;
+        this.storyService.getIDs().then(function (ids) { return _this.ids = ids; });
+    };
     ListComponent.prototype.ngOnInit = function () {
         this.getStories();
+        this.getIDs();
     };
     ListComponent = __decorate([
         core_1.Component({

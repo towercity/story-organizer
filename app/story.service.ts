@@ -1,5 +1,7 @@
 import { Story } from './story';
 import { STORIES } from './temp-stories';
+import { LIST_IDS } from './temp-stories';
+
 import { Injectable } from '@angular/core';
 
 @Injectable()
@@ -8,8 +10,7 @@ export class StoryService {
     return Promise.resolve(STORIES);
   }
 
-  getStory(id: number) {
-    return this.getStories()
-               .then(stories => stories.find(story=> story.id === id));
+  getIDs() {
+    return Promise.resolve(LIST_IDS);
   }
 }

@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var temp_stories_1 = require('./temp-stories');
+var temp_stories_2 = require('./temp-stories');
 var core_1 = require('@angular/core');
 var StoryService = (function () {
     function StoryService() {
@@ -16,9 +17,8 @@ var StoryService = (function () {
     StoryService.prototype.getStories = function () {
         return Promise.resolve(temp_stories_1.STORIES);
     };
-    StoryService.prototype.getStory = function (id) {
-        return this.getStories()
-            .then(function (stories) { return stories.find(function (story) { return story.id === id; }); });
+    StoryService.prototype.getIDs = function () {
+        return Promise.resolve(temp_stories_2.LIST_IDS);
     };
     StoryService = __decorate([
         core_1.Injectable(), 

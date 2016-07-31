@@ -2,32 +2,45 @@
 //setting as 'any' to avoid a mysterious error
 exports.STORIES = [
     {
-        id: 11,
+        id: 1,
         title: 'From the Sky',
         desc: 'Seven shorts about US bombings; can be expanded with more detail in many parts',
-        status: 'Working',
-        series: 'None'
+        status: 0,
+        series: [0]
     },
     {
-        id: 12,
+        id: 2,
         title: 'Dick Van Dyke Gets Married',
         desc: "Episode of Dick Van Dyke Show reveals the upset in the center of a woman's life",
-        status: 'Drafted',
-        series: 'None'
+        status: 1,
+        series: [0]
     },
     {
-        id: 13,
+        id: 3,
         title: 'Songs About Men',
         desc: 'Lost family gets caught up in racist Konig family drama; reflections on the beautiful future of Detroit',
-        status: 'Working',
-        series: ['Corn', 'Three Sentimental Novellas']
+        status: 0,
+        series: [1, 2]
     },
     {
-        id: 14,
+        id: 4,
         title: 'Rhesus Macaque',
         desc: 'When you die in St. Pete, you die in real life',
-        status: 'To Write',
-        series: 'Three Sentimental Novellas'
+        status: 2,
+        series: [2]
     }
 ];
+exports.LIST_IDS = {
+    status: [
+        "Working",
+        "Drafted",
+        "To-write",
+        "Complete"
+    ],
+    series: [
+        "None",
+        "Corn",
+        "Three Sentimental Novellas"
+    ]
+};
 //# sourceMappingURL=temp-stories.js.map
