@@ -1,15 +1,15 @@
 "use strict";
 var router_1 = require('@angular/router');
-var list_component_1 = require('./list.component');
+var status_list_component_1 = require('./status-list.component');
 var routes = [
     {
         path: '',
-        redirectTo: '/list',
+        redirectTo: '/status-list',
         pathMatch: 'full'
     },
     {
-        path: 'list',
-        component: list_component_1.ListComponent
+        path: 'status-list',
+        component: status_list_component_1.StatusListComponent
     }
 ];
 exports.appRouterProviders = [

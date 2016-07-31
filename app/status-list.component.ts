@@ -8,11 +8,11 @@ import { LIST_IDS } from './temp-stories';
 @Component({
   selector: 'list-view',
   //styleUrls:  ['styles/list.component.css'],
-  templateUrl: 'templates/list.component.html',
+  templateUrl: 'templates/status-list.component.html',
   providers: [StoryService]
 })
 
-export class ListComponent implements OnInit {
+export class StatusListComponent implements OnInit {
   stories: Story[];
 
   //TODO: Fix how IDs are imported--b/c this is very improper
