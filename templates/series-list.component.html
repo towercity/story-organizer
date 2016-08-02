@@ -1,0 +1,13 @@
+<div *ngFor="let series of ids.series; let idx = index">
+  <h2>{{series}}</h2>
+  <p>{{series.index}}</p>
+  <ul>
+    <span *ngFor="let story of stories">
+      <span *ngFor="let storySeries of story.series">
+        <li *ngIf="storySeries == idx">
+        {{story.title}}
+        </li>
+      </span>
+    </span>
+  </ul>
+</div>
