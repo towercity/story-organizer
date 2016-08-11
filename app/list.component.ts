@@ -26,6 +26,14 @@ export class ListComponent implements OnInit {
     console.log(info);
   }
 
+  switchFormat() {
+    if (this.format === 'status') {
+      this.format = 'series';
+    } else if (this.format === 'series') {
+      this.format = 'status';
+    }
+  }
+
   getStories() {
     this.storyService.getStories().then(stories => this.stories = stories);
   }
