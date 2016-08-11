@@ -1,0 +1,31 @@
+<!-- by series -->
+<div *ngIf="format == 'series'">
+  <div *ngFor="let series of ids.series; let idx = index">
+    <h2>{{series}}</h2>
+    <p>{{series.index}}</p>
+    <ul>
+      <span *ngFor="let story of stories">
+        <span *ngFor="let storySeries of story.series">
+          <li *ngIf="storySeries == idx">
+          {{story.title}}
+          </li>
+        </span>
+      </span>
+    </ul>
+  </div>
+</div>
+
+<!-- by status -->
+<div *ngIf="format == 'status'">
+  <div *ngFor="let status of ids.status; let idx = index">
+    <h2>{{status}}</h2>
+    <p>{{status.index}}</p>
+    <ul>
+      <span *ngFor="let story of stories">
+        <li *ngIf="story.status == idx">
+        {{story.title}}
+        </li>
+      </span>
+    </ul>
+  </div>
+</div>

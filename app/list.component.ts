@@ -8,15 +8,16 @@ import { LIST_IDS } from './temp-stories';
 @Component({
   selector: 'list-view',
   //styleUrls:  ['styles/list.component.css'],
-  templateUrl: 'templates/status-list.component.html',
+  templateUrl: 'templates/list.component.html',
   providers: [StoryService]
 })
 
-export class StatusListComponent implements OnInit {
+export class ListComponent implements OnInit {
   stories: Story[];
-
   //TODO: Fix how IDs are imported--b/c this is very improper
   ids: any = LIST_IDS;
+  format: string = 'status';
+  sub: any;
 
   constructor(
     private storyService: StoryService) { }
@@ -38,3 +39,6 @@ export class StatusListComponent implements OnInit {
     this.getIDs();
   }
 }
+
+// make a url split--list/series and list/status. use an ngif in the template
+// after the heading and
