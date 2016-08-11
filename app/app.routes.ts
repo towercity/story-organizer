@@ -1,16 +1,21 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
 
-import { ListComponent } from './list.component';
+import { SeriesListComponent } from './series-list.component';
+import { StatusListComponent } from './status-list.component';
 
 const routes: RouterConfig = [
   {
     path: '',
-    redirectTo: '/list',
+    redirectTo: '/status',
     pathMatch: 'full'
   },
   {
-    path: 'list',
-    component: ListComponent
+    path: 'series',
+    component: SeriesListComponent
+  },
+  {
+    path: 'status',
+    component: StatusListComponent
   }
 ];
 

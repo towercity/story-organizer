@@ -6,17 +6,16 @@ import { StoryService } from './story.service';
 import { LIST_IDS } from './temp-stories';
 
 @Component({
-  selector: 'list-view',
+  selector: 'status-list-view',
   //styleUrls:  ['styles/list.component.css'],
-  templateUrl: 'templates/list.component.html',
+  templateUrl: 'templates/status-list.component.html',
   providers: [StoryService]
 })
 
-export class ListComponent implements OnInit {
+export class StatusListComponent implements OnInit {
   stories: Story[];
   //TODO: Fix how IDs are imported--b/c this is very improper
   ids: any = LIST_IDS;
-  format: string = 'status';
   sub: any;
 
   constructor(
@@ -24,14 +23,6 @@ export class ListComponent implements OnInit {
 
   log(info: any) {
     console.log(info);
-  }
-
-  switchFormat() {
-    if (this.format === 'status') {
-      this.format = 'series';
-    } else if (this.format === 'series') {
-      this.format = 'status';
-    }
   }
 
   getStories() {
@@ -47,6 +38,3 @@ export class ListComponent implements OnInit {
     this.getIDs();
   }
 }
-
-// make a url split--list/series and list/status. use an ngif in the template
-// after the heading and

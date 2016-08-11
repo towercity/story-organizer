@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let status of ids.status; let idx = index" class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">{{status}}</h2>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <span *ngFor="let story of stories">
+              <li *ngIf="story.status == idx">
+                {{story.title}}
+              </li>
+            </span>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
