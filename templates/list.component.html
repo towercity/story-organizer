@@ -1,37 +1,50 @@
 <div class="container">
-  <!-- by series -->
-  <div *ngIf="format == 'series'" class="row">
-    <div *ngFor="let series of ids.series; let idx = index" class="col-md-3">
-      <h2>{{series}}</h2>
-      <p>{{series.index}}</p>
-      <ul>
-        <span *ngFor="let story of stories">
-          <span *ngFor="let storySeries of story.series">
-            <li *ngIf="storySeries == idx">
-              {{story.title}}
-            </li>
-          </span>
-        </span>
-      </ul>
-    </div>
-  </div>
-
   <!-- by status -->
   <div *ngIf="format == 'status'" class="row">
     <div *ngFor="let status of ids.status; let idx = index" class="col-md-3">
-      <h2>{{status}}</h2>
-      <p>{{status.index}}</p>
-      <ul>
-        <span *ngFor="let story of stories">
-          <li *ngIf="story.status == idx">
-            {{story.title}}
-          </li>
-        </span>
-      </ul>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">{{status}}</h2>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <span *ngFor="let story of stories">
+              <li *ngIf="story.status == idx">
+                {{story.title}}
+              </li>
+            </span>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- by series -->
+  <div *ngIf="format == 'series'" class="row">
+    <div *ngFor="let series of ids.series; let idx = index" class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title">{{series}}</h2>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <span *ngFor="let story of stories">
+              <span *ngFor="let storySeries of story.series">
+                <li *ngIf="storySeries == idx">
+                  {{story.title}}
+                </li>
+              </span>
+            </span>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<div><button (click)="switchFormat()" class="btn btn-primary">
-  Switch Display Format
-</button></div>
+<div class="btn-group bottom-buttons">
+  <button (click)="switchFormat()" class="btn btn-primary">
+    Switch Display Format
+  </button>
+</div>

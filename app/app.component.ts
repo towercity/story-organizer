@@ -5,10 +5,7 @@ import { StoryService } from './story.service';
 
 @Component({
   selector: 'main-app',
-  template: `
-    <h1>{{title}} - {{author}}</h1>
-    <router-outlet></router-outlet>
-  `,
+  templateUrl: 'templates/app.component.html',
   //styleUrls: ['styles/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
