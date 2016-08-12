@@ -2,11 +2,12 @@ import { provideRouter, RouterConfig }  from '@angular/router';
 
 import { SeriesListComponent } from './series-list.component';
 import { StatusListComponent } from './status-list.component';
+import { TableComponent } from './table.component';
 
 const routes: RouterConfig = [
   {
     path: '',
-    redirectTo: '/status',
+    redirectTo: '/table',
     pathMatch: 'full'
   },
   {
@@ -16,6 +17,10 @@ const routes: RouterConfig = [
   {
     path: 'status',
     component: StatusListComponent
+  },
+  {
+    path: 'table',
+    component: TableComponent
   }
 ];
 

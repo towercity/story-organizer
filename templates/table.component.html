@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">Table View</h2>
+  </div>
+  <div class="panel-body">
+    <!-- Table view -->
+    <table class="table table-hover">
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Series</th>
+        <th>Description</th>
+      </tr>
+      <tr *ngFor="let story of stories">
+        <td>{{story.id}}</td>
+        <td>{{story.title}}</td>
+        <td>{{story.status}}</td>
+        <td>{{story.series}}</td>
+        <td>{{story.desc}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
