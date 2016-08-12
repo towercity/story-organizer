@@ -4,14 +4,14 @@
 
 <router-outlet></router-outlet>
 
-<div class="btn-group bottom-buttons">
-  <button (click)="goToPage('status')" class="btn btn-default">
+<div class="btn-group btn-group-justified bottom-buttons">
+  <a (click)="goToPage('status')" class="btn btn-default">
     View by Status
-  </button>
-  <button (click)="goToPage('series')" class="btn btn-default">
+  </a>
+  <a (click)="goToPage('series')" class="btn btn-default">
     View by Series
-  </button>
-  <button (click)="goToPage('table')" class="btn btn-default">
+  </a>
+  <a (click)="goToPage('table')" class="btn btn-default">
     View Table
-  </button>
+  </a>
 </div>

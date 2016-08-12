@@ -6,7 +6,7 @@ import { StoryService } from './story.service';
 @Component({
   selector: 'main-app',
   templateUrl: 'templates/app.component.html',
-  //styleUrls: ['styles/app.component.css'],
+  styleUrls: ['styles/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
     StoryService
