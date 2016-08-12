@@ -5,13 +5,13 @@
 <router-outlet></router-outlet>
 
 <div class="btn-group bottom-buttons">
-  <button class="btn btn-default">
+  <button (click)="goToPage('status')" class="btn btn-default">
     View by Status
   </button>
-  <button class="btn btn-default">
+  <button (click)="goToPage('series')" class="btn btn-default">
     View by Series
   </button>
-  <button class="btn btn-default">
+  <button (click)="goToPage('table')" class="btn btn-default">
     View Table
   </button>
 </div>

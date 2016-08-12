@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
 import { StoryService } from './story.service';
 
@@ -14,5 +14,14 @@ import { StoryService } from './story.service';
 })
 export class AppComponent {
   title = 'Story Organizer';
-  author = 'Matthew Nerger'
+  author = 'Matthew Nerger';
+
+  constructor(
+    private router: Router
+  ) {}
+
+  goToPage(page: string) {
+    let link = ['/' + page]
+    this.router.navigate(link);
+  }
 }
