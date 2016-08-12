@@ -6,7 +6,7 @@
     <!-- Table view -->
     <table class="table table-hover">
       <tr>
-        <th>ID</th>
+        <th></th>
         <th>Title</th>
         <th>Status</th>
         <th>Series</th>
@@ -15,8 +15,17 @@
       <tr *ngFor="let story of stories">
         <td>{{story.id}}</td>
         <td>{{story.title}}</td>
-        <td>{{story.status}}</td>
-        <td>{{story.series}}</td>
+        <td>
+          <span *ngIf="story.status == 0">Working</span>
+          <span *ngIf="story.status == 1">Drafted</span>
+          <span *ngIf="story.status == 2">To-Write</span>
+          <span *ngIf="story.status == 3">Complete</span>
+        </td>
+        <td>
+          <span *ngFor="let ser of story.series; let idx = index">
+            <span *ngIf="ser == 0">None</span><span *ngIf="ser == 1">Corn</span><span *ngIf="ser == 2">Three Sentimental Novellas</span><span *ngIf="idx + 1 < story.series.length">,</span>
+          </span>
+        </td>
         <td>{{story.desc}}</td>
       </tr>
     </table>
