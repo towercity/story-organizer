@@ -13,4 +13,9 @@ export class StoryService {
   getIDs() {
     return Promise.resolve(LIST_IDS);
   }
+
+  getStory(id: number) {
+    return this.getStories()
+               .then(stories => stories.find(story => story.id === id));
+  }
 }
