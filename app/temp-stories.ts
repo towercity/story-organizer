@@ -50,6 +50,27 @@ export var STORIES: Story[] = [
     desc: 'Uncle K leads a group of misfit across the Deep South on a trail of lies',
     status: 1,
     series: [1]
+  },
+  {
+    id: 7,
+    title: 'Sticks of Fire (original)',
+    desc: "Weird power imbalance between angsty D-- and unstable J-- comes to a peak when she tries to burn a fountain down in Winthrop Village",
+    status: 3,
+    series: [1]
+  },
+  {
+    id: 8,
+    title: 'Onus of Mystery',
+    desc: "Somebody has stolen Joshua's notebook. So she sets out to find it.",
+    status: 1,
+    series: [1]
+  },
+  {
+    id: 9,
+    title: 'Nebraska',
+    desc: 'Something evil lurks in wet deserts of west Nebraska; it follows Ilana to a mysterious government compound where she (and many other) try to make their home',
+    status: 0,
+    series: [2]
   }
 ];
 
