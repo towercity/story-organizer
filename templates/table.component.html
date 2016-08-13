@@ -1,19 +1,17 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h2 class="panel-title">Table View</h2>
+    <h2 class="panel-title">All Stories</h2>
   </div>
   <div class="panel-body">
     <!-- Table view -->
     <table class="table table-hover">
       <tr>
-        <th></th>
         <th>Title</th>
         <th>Status</th>
         <th>Series</th>
         <th>Description</th>
       </tr>
       <tr *ngFor="let story of stories">
-        <td>{{story.id}}</td>
         <td>{{story.title}}</td>
         <td>
           <span *ngIf="story.status == 0">Working</span>

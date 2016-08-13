@@ -25,6 +25,19 @@ export class SeriesListComponent implements OnInit {
     console.log(info);
   }
 
+  isInSeries(story: Story, idx: number) {
+    var inSer: boolean = false;
+    var seriesArray = story.series;
+
+    seriesArray.forEach(function(series) {
+      if (series === idx) {
+        inSer = true;
+      }
+    });
+
+    return inSer;
+  }
+
   getStories() {
     this.storyService.getStories().then(stories => this.stories = stories);
   }

@@ -3,32 +3,53 @@ import { Story } from './story';
 //setting as 'any' to avoid a mysterious error
 export var STORIES: Story[] = [
   {
-    id: 1,
+    id: 0,
     title: 'From the Sky',
     desc: 'Seven shorts about US bombings; can be expanded with more detail in many parts',
-    status: 0,
+    status: 1,
     series: [0]
   },
   {
-    id: 2,
+    id: 1,
     title: 'Dick Van Dyke Gets Married',
     desc: "Episode of Dick Van Dyke Show reveals the upset in the center of a woman's life",
     status: 1,
     series: [0]
   },
   {
-    id: 3,
+    id: 2,
     title: 'Songs About Men',
     desc: 'Lost family gets caught up in racist Konig family drama; reflections on the beautiful future of Detroit',
     status: 0,
     series: [1, 2]
   },
   {
-    id: 4,
+    id: 3,
     title: 'Rhesus Macaque',
     desc: 'When you die in St. Pete, you die in real life',
     status: 2,
-    series: [2]
+    series: [2, 3]
+  },
+  {
+    id: 4,
+    title: 'A Sentimental Education for the New American Century',
+    desc: 'George Bush, war criminal, learns to paint',
+    status: 1,
+    series: [0]
+  },
+  {
+    id: 5,
+    title: 'The Times of Plenty Are Over',
+    desc: 'Jackie (Konig) tries to help her father keep an eye on her dying aunt, Mary Ellen; Gothic house story',
+    status: 1,
+    series: [1]
+  },
+  {
+    id: 6,
+    title: 'Uncle Konig Kills an Indian',
+    desc: 'Uncle K leads a group of misfit across the Deep South on a trail of lies',
+    status: 1,
+    series: [1]
   }
 ];
 
@@ -36,12 +57,12 @@ export var LIST_IDS: any = {
   status: [
     "Working",
     "Drafted",
-    "To-write",
-    "Complete"
+    "To-write"
   ],
   series: [
     "None",
     "Corn",
-    "Three Sentimental Novellas"
+    "Three Sentimental Novellas",
+    "Tampa Stories"
   ]
 }
