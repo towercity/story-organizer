@@ -24,4 +24,9 @@ export class AppComponent {
     let link = ['/' + page]
     this.router.navigate(link);
   }
+
+  goToStory(id: number) {
+    let link = ['/story', id];
+    this.router.navigate(link);
+  }
 }

@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { Story } from './story';
 import { StoryService } from './story.service';
@@ -9,9 +9,9 @@ import { StoryService } from './story.service';
   templateUrl: 'templates/story-detail.component.html'
 })
 
-export class StoryDetailComponent implements OnInit, OnDestroy {
+export class StoryDetailComponent implements OnInit {
   story: Story;
-  sub: any;
+  navigated = false;
 
   constructor(
     private storyService: StoryService,
@@ -19,19 +19,26 @@ export class StoryDetailComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.sub = (params => {
-      let id = +params['id'];
-      this.storyService.getStory(id)
-        .then(story => this.story = story);
+    this.route.params.forEach((params: Params) => {
+      if (params['id'] !== undefined) {
+        let id = +params['id'];
+        this.navigated = true;
+        this.storyService.getStory(id)
+            .then(story => this.story = story);
+      } else {
+        this.navigated = false;
+        this.story = new Story();
+      }
     });
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  goBack(savedStory: Story = null) {
+    //this.close.emit(savedHero);
+    if (this.navigated) { window.history.back(); }
   }
 
-  goBack() {
-    window.history.back();
+  log(info: any) {
+    console.log(info);
   }
 }
 

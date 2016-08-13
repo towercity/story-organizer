@@ -16,7 +16,7 @@ export class StatusListComponent implements OnInit {
   stories: Story[];
   //TODO: Fix how IDs are imported--b/c this is very improper
   ids: any = LIST_IDS;
-  sub: any;
+  error: any;
 
   constructor(
     private storyService: StoryService) { }
@@ -26,7 +26,10 @@ export class StatusListComponent implements OnInit {
   }
 
   getStories() {
-    this.storyService.getStories().then(stories => this.stories = stories);
+    this.storyService
+        .getStories()
+        .then(stories => this.stories = stories)
+        .catch(error => this.error = error);
   }
 
   getIDs() {
