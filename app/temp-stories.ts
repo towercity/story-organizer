@@ -55,7 +55,7 @@ export var STORIES: Story[] = [
     id: 7,
     title: 'Sticks of Fire (original)',
     desc: "Weird power imbalance between angsty D-- and unstable J-- comes to a peak when she tries to burn a fountain down in Winthrop Village",
-    status: 3,
+    status: 2,
     series: [1]
   },
   {

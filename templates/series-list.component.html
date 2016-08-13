@@ -22,7 +22,6 @@
                 <span *ngIf="story.status == 0">Working</span>
                 <span *ngIf="story.status == 1">Drafted</span>
                 <span *ngIf="story.status == 2">To-Write</span>
-                <span *ngIf="story.status == 3">Complete</span>
               </td>
               <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
                 {{story.desc}}
