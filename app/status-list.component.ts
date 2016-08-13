@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
 import { Story } from './story';
 import { StoryService } from './story.service';
@@ -19,7 +20,14 @@ export class StatusListComponent implements OnInit {
   error: any;
 
   constructor(
-    private storyService: StoryService) { }
+    private storyService: StoryService,
+    private router: Router
+  ) { }
+
+  goToStory(story: Story) {
+    let link = ['/story', story.id];
+    this.router.navigate(link);
+  }
 
   log(info: any) {
     console.log(info);

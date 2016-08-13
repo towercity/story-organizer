@@ -15,13 +15,17 @@
             </tr>
 
             <tr *ngFor="let story of stories">
-              <td *ngIf="story.status == idx">{{story.title}}</td>
-              <td *ngIf="story.status == idx">
+              <td *ngIf="story.status == idx" (click)="goToStory(story)">
+                {{story.title}}
+              </td>
+              <td *ngIf="story.status == idx" (click)="goToStory(story)">
                 <span *ngFor="let ser of story.series; let idx = index">
                   <span *ngIf="ser == 0">None</span><span *ngIf="ser == 1">Corn</span><span *ngIf="ser == 2">Three Sentimental Novellas</span><span *ngIf="idx + 1 < story.series.length">,</span>
                 </span>
               </td>
-              <td *ngIf="story.status == idx">{{story.desc}}</td>
+              <td *ngIf="story.status == idx" (click)="goToStory(story)">
+                {{story.desc}}
+              </td>
             </tr>
 
           </table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ROUTER_DIRECTIVES, Router } from '@angular/router';
 
 import { Story } from './story';
 import { StoryService } from './story.service';
@@ -19,7 +20,9 @@ export class SeriesListComponent implements OnInit {
   sub: any;
 
   constructor(
-    private storyService: StoryService) { }
+    private storyService: StoryService,
+    private router: Router
+  ) { }
 
   log(info: any) {
     console.log(info);
@@ -36,6 +39,11 @@ export class SeriesListComponent implements OnInit {
     });
 
     return inSer;
+  }
+
+  goToStory(story: Story) {
+    let link = ['/story', story.id];
+    this.router.navigate(link);
   }
 
   getStories() {

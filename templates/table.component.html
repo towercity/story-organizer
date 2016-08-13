@@ -12,19 +12,19 @@
         <th>Description</th>
       </tr>
       <tr *ngFor="let story of stories">
-        <td>{{story.title}}</td>
-        <td>
+        <td (click)="goToStory(story)">{{story.title}}</td>
+        <td (click)="goToStory(story)">
           <span *ngIf="story.status == 0">Working</span>
           <span *ngIf="story.status == 1">Drafted</span>
           <span *ngIf="story.status == 2">To-Write</span>
           <span *ngIf="story.status == 3">Complete</span>
         </td>
-        <td>
+        <td (click)="goToStory(story)">
           <span *ngFor="let ser of story.series; let idx = index">
             <span *ngIf="ser == 0">None</span><span *ngIf="ser == 1">Corn</span><span *ngIf="ser == 2">Three Sentimental Novellas</span><span *ngIf="idx + 1 < story.series.length">,</span>
           </span>
         </td>
-        <td>{{story.desc}}</td>
+        <td (click)="goToStory(story)">{{story.desc}}</td>
       </tr>
     </table>
   </div>

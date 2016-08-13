@@ -15,14 +15,18 @@
             </tr>
 
             <tr *ngFor="let story of stories">
-              <td *ngIf="isInSeries(story, idx)">{{story.title}}</td>
-              <td *ngIf="isInSeries(story, idx)">
+              <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
+                {{story.title}}
+              </td>
+              <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
                 <span *ngIf="story.status == 0">Working</span>
                 <span *ngIf="story.status == 1">Drafted</span>
                 <span *ngIf="story.status == 2">To-Write</span>
                 <span *ngIf="story.status == 3">Complete</span>
               </td>
-              <td *ngIf="isInSeries(story, idx)">{{story.desc}}</td>
+              <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
+                {{story.desc}}
+              </td>
             </tr>
 
           </table>
