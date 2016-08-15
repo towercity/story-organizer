@@ -82,9 +82,9 @@ export var STORIES: Story[] = [
   {
     id: 11,
     title: "'The Monster'",
-    desc: "Uncle K's mother gives birth to him (in a pile of dust and ashes), then immediately walks to work at a factory. She enjoys her walk, past the water, but a monster stares at her from across the water. A stranger attempts to help her."
+    desc: "Uncle K's mother gives birth to him (in a pile of dust and ashes), then immediately walks to work at a factory. She enjoys her walk, past the water, but a monster stares at her from across the water. A stranger attempts to help her.",
     status: 2,
-    series: [2]
+    series: [1]
   }
 ];
 

@@ -6,23 +6,23 @@
     <!-- Table view -->
     <table class="table table-hover">
       <tr>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Series</th>
-        <th>Description</th>
+        <th class="table-title">Title</th>
+        <th class="table-status">Status</th>
+        <th class="table-series">Series</th>
+        <th class="table-desc">Description</th>
       </tr>
       <tr *ngFor="let story of stories">
-        <td (click)="goToStory(story)">{{story.title}}</td>
-        <td (click)="goToStory(story)">
+        <td (click)="goToStory(story)" class="table-title">{{story.title}}</td>
+        <td (click)="goToStory(story)" class="table-status">
           <span>{{ids.status[story.status]}}</span>
         </td>
         <td (click)="goToStory(story)">
-          <span *ngFor="let ser of story.series; let idx = index">
+          <span *ngFor="let ser of story.series; let idx = index" class="table-series">
             <!-- in one line to avoid whitespace -->
             <span>{{ids.series[ser]}}</span><span *ngIf="idx + 1 < story.series.length">,</span>
           </span>
         </td>
-        <td (click)="goToStory(story)">{{story.desc}}</td>
+        <td (click)="goToStory(story)" class="table-desc">{{story.desc}}</td>
       </tr>
     </table>
   </div>

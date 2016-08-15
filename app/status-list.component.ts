@@ -8,7 +8,7 @@ import { LIST_IDS } from './temp-stories';
 
 @Component({
   selector: 'status-list-view',
-  //styleUrls:  ['styles/list.component.css'],
+  styleUrls:  ['styles/tables.css'],
   templateUrl: 'templates/status-list.component.html',
   providers: [StoryService]
 })
