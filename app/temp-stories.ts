@@ -71,6 +71,20 @@ export var STORIES: Story[] = [
     desc: 'Something evil lurks in wet deserts of west Nebraska; it follows Ilana to a mysterious government compound where she (and many other) try to make their home',
     status: 0,
     series: [2]
+  },
+  {
+    id: 10,
+    title: "Ernest Hemingway's Purple Wig",
+    desc: 'Man sees Hemingway dancing in a purple wig and punches him',
+    status: 1,
+    series: [0]
+  },
+  {
+    id: 11,
+    title: "'The Monster'",
+    desc: "Uncle K's mother gives birth to him (in a pile of dust and ashes), then immediately walks to work at a factory. She enjoys her walk, past the water, but a monster stares at her from across the water. A stranger attempts to help her."
+    status: 2,
+    series: [2]
   }
 ];
 
