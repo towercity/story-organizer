@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Story } from './story';
 import { StoryService } from './story.service';
 
+import { LIST_IDS } from './temp-stories';
+
 @Component({
   selector: 'story-detail',
   templateUrl: 'templates/story-detail.component.html'
@@ -12,6 +14,7 @@ import { StoryService } from './story.service';
 export class StoryDetailComponent implements OnInit {
   story: Story;
   navigated = false;
+  ids: any = LIST_IDS;
 
   constructor(
     private storyService: StoryService,
@@ -19,6 +22,8 @@ export class StoryDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.getIDs();
+
     this.route.params.forEach((params: Params) => {
       if (params['id'] !== undefined) {
         let id = +params['id'];
@@ -39,6 +44,10 @@ export class StoryDetailComponent implements OnInit {
 
   log(info: any) {
     console.log(info);
+  }
+
+  getIDs() {
+    this.storyService.getIDs().then(ids => this.ids = ids);
   }
 }
 

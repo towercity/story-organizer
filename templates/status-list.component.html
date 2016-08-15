@@ -21,7 +21,7 @@
               <td *ngIf="story.status == idx" (click)="goToStory(story)">
                 <span *ngFor="let ser of story.series; let idx = index">
                   <!-- in one line to avoid whitespace -->
-                  <span *ngIf="ser == 0">None</span><span *ngIf="ser == 1">Corn</span><span *ngIf="ser == 2">Three Sentimental Novellas</span><span *ngIf="ser == 3">Tampa Stories</span><span *ngIf="idx + 1 < story.series.length">,</span>
+                  <span>{{ids.series[ser]}}</span><span *ngIf="idx + 1 < story.series.length">,</span>
                 </span>
               </td>
               <td *ngIf="story.status == idx" (click)="goToStory(story)">

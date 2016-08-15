@@ -19,9 +19,7 @@
                 {{story.title}}
               </td>
               <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
-                <span *ngIf="story.status == 0">Working</span>
-                <span *ngIf="story.status == 1">Drafted</span>
-                <span *ngIf="story.status == 2">To-Write</span>
+                <span>{{ids.status[story.status]}}</span>
               </td>
               <td *ngIf="isInSeries(story, idx)" (click)="goToStory(story)">
                 {{story.desc}}
