@@ -32,6 +32,7 @@
                 <span class="input-group-btn" (click)="removeSeries(idx)">
                   <button class="btn btn-default">
                     <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    Remove Series
                   </button>
                 </span>
               </div>
@@ -40,7 +41,7 @@
             <div class="input-group series-input-box">
               <span class="input-group-addon">{{ids.series[newSeriesID]}}</span>
               <input [(ngModel)]="newSeriesID" class="form-control">
-              <span class="input-group-btn" (click)="addSeries(newSeriesID)">
+              <span class="input-group-btn" (click)="addSeries()">
                 <button class="btn btn-default">
                   <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                   Add series

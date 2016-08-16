@@ -59,8 +59,9 @@ export class StoryDetailComponent implements OnInit {
     this.story.series.splice(arrayID, 1);
   }
 
-  addSeries(seriesID: number) {
-    this.story.series.push(seriesID);
+  addSeries() {
+    this.story.series.push(this.newSeriesID);
+    this.newSeriesID = null;
   }
 
   removeStory() {

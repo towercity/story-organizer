@@ -54,12 +54,14 @@ export class NewStoryComponent implements OnInit {
     this.newStory.series.splice(arrayID, 1);
   }
 
-  addSeries(seriesID: number) {
-    this.newStory.series.push(seriesID);
+  addSeries() {
+    this.newStory.series.push(this.newSeriesID);
+    this.newSeriesID = null;
   }
 
   addStory() {
     this.newStory.id = this.stories.length;
+    this.newStory.series.push(this.newSeriesID);
     this.stories.push(this.newStory);
     this.goToPage('table');
   }
