@@ -85,6 +85,13 @@ export var STORIES: Story[] = [
     desc: "Uncle K's mother gives birth to him (in a pile of dust and ashes), then immediately walks to work at a factory. She enjoys her walk, past the water, but a monster stares at her from across the water. A stranger attempts to help her.",
     status: 2,
     series: [1]
+  },
+  {
+    id: 12,
+    title: "'Becoming the Mime'",
+    desc: "After a prophecy, separatist exile mother moves her family from Miami to Tacoma, WA; after a series of Theodore Drieser style events, the family learns their separatist movement has been dead for years, and they are nothing more that Americans",
+    status: 1,
+    series: []
   }
 ];
 

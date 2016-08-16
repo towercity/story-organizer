@@ -8,7 +8,7 @@ import { LIST_IDS } from './temp-stories';
 
 @Component({
   selector: 'story-detail',
-  styleUrls: ['styles/tables.css', 'styles/story-detail.component.css'],
+  styleUrls: ['styles/story-detail.component.css'],
   templateUrl: 'templates/story-detail.component.html'
 })
 
@@ -39,11 +39,6 @@ export class StoryDetailComponent implements OnInit {
     });
   }
 
-  goBack(savedStory: Story = null) {
-    //this.close.emit(savedHero);
-    if (this.navigated) { window.history.back(); }
-  }
-
   log(info: any) {
     console.log(info);
   }
@@ -60,10 +55,3 @@ export class StoryDetailComponent implements OnInit {
     this.story.series.push(seriesID);
   }
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/

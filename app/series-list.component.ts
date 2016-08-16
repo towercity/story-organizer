@@ -17,7 +17,6 @@ export class SeriesListComponent implements OnInit {
   stories: Story[];
   //TODO: Fix how IDs are imported--b/c this is very improper
   ids: any = LIST_IDS;
-  sub: any;
 
   constructor(
     private storyService: StoryService,

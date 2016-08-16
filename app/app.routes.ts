@@ -4,6 +4,7 @@ import { SeriesListComponent } from './series-list.component';
 import { StatusListComponent } from './status-list.component';
 import { TableComponent } from './table.component';
 import { StoryDetailComponent } from './story-detail.component';
+import { NewStoryComponent } from './new-story.component';
 
 const routes: RouterConfig = [
   {
@@ -26,6 +27,10 @@ const routes: RouterConfig = [
   {
     path: 'story/:id',
     component: StoryDetailComponent
+  },
+  {
+    path: 'new-story',
+    component: NewStoryComponent
   }
 ];
 
