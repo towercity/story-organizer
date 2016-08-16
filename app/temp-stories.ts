@@ -7,14 +7,14 @@ export var STORIES: Story[] = [
     title: 'From the Sky',
     desc: 'Seven shorts about US bombings; can be expanded with more detail in many parts',
     status: 1,
-    series: [0]
+    series: []
   },
   {
     id: 1,
     title: 'Dick Van Dyke Gets Married',
     desc: "Episode of Dick Van Dyke Show reveals the upset in the center of a woman's life",
     status: 1,
-    series: [0]
+    series: []
   },
   {
     id: 2,
@@ -28,14 +28,14 @@ export var STORIES: Story[] = [
     title: 'Rhesus Macaque',
     desc: 'When you die in St. Pete, you die in real life',
     status: 2,
-    series: [2, 3]
+    series: [2, 0]
   },
   {
     id: 4,
     title: 'A Sentimental Education for the New American Century',
     desc: 'George Bush, war criminal, learns to paint',
     status: 1,
-    series: [0]
+    series: []
   },
   {
     id: 5,
@@ -56,7 +56,7 @@ export var STORIES: Story[] = [
     title: 'Sticks of Fire (original)',
     desc: "Weird power imbalance between angsty D-- and unstable J-- comes to a peak when she tries to burn a fountain down in Winthrop Village",
     status: 2,
-    series: [3]
+    series: [0]
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export var STORIES: Story[] = [
     title: "Ernest Hemingway's Purple Wig",
     desc: 'Man sees Hemingway dancing in a purple wig and punches him',
     status: 1,
-    series: [0]
+    series: []
   },
   {
     id: 11,
@@ -95,9 +95,8 @@ export var LIST_IDS: any = {
     "To-write"
   ],
   series: [
-    "None",
+    "Tampa Stories",
     "Corn",
-    "Three Sentimental Novellas",
-    "Tampa Stories"
+    "Three Sentimental Novellas"
   ]
 }
