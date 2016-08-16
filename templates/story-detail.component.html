@@ -36,10 +36,17 @@
                 </span>
               </div>
             </span>
-            <button class="btn btn-default">
-              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-              Add new series
-            </button>
+            
+            <div class="input-group series-input-box">
+              <span class="input-group-addon">{{ids.series[newSeriesID]}}</span>
+              <input [(ngModel)]="newSeriesID" class="form-control">
+              <span class="input-group-btn" (click)="addSeries(newSeriesID)">
+                <button class="btn btn-default">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                  Add series
+                </button>
+              </span>
+            </div>
           </div>
         </div>
         <div class="form-group">

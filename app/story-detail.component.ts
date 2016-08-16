@@ -14,6 +14,7 @@ import { LIST_IDS } from './temp-stories';
 
 export class StoryDetailComponent implements OnInit {
   story: Story;
+  newSeriesID: number;
   navigated = false;
   ids: any = LIST_IDS;
 
@@ -53,7 +54,10 @@ export class StoryDetailComponent implements OnInit {
 
   removeSeries(arrayID: number) {
     this.story.series.splice(arrayID, 1);
-    console.log(this.story.series);
+  }
+
+  addSeries(seriesID: number) {
+    this.story.series.push(seriesID);
   }
 }
 
