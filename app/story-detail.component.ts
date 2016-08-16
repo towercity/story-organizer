@@ -8,7 +8,7 @@ import { LIST_IDS } from './temp-stories';
 
 @Component({
   selector: 'story-detail',
-  styleUrls: ['styles/tables.css'],
+  styleUrls: ['styles/tables.css', 'styles/story-detail.component.css'],
   templateUrl: 'templates/story-detail.component.html'
 })
 

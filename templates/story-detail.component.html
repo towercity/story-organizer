@@ -21,15 +21,25 @@
             <input [(ngModel)]="story.status" class="form-control">
           </div>
         </div>
-        <div class="form-group">
+        <div>
           <label for="series">Series:</label>
-          <div class="input-group">
-            <div class="form-control">
-              <span *ngFor="let ser of story.series; let idx = index">
-                <!-- in one line to avoid whitespace -->
-                <span>{{ids.series[ser]}}</span><span *ngIf="idx + 1 < story.series.length">,</span>
-              </span>
-            </div>
+          <div class="form-group">
+              <!-- TODO: add a separate input for each series, later "add series" and "remove item" buttons -->
+            <span *ngFor="let ser of story.series; let idx = index">
+              <div class="input-group series-input-box">
+                <span class="input-group-addon">{{ids.series[ser]}}</span>
+                <input [(ngModel)]="story.series[idx]" class="form-control">
+                <span class="input-group-btn">
+                  <button class="btn btn-default">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                </span>
+              </div>
+            </span>
+            <button class="btn btn-default">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              Add new series
+            </button>
           </div>
         </div>
         <div class="form-group">
