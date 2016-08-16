@@ -50,6 +50,11 @@ export class StoryDetailComponent implements OnInit {
   getIDs() {
     this.storyService.getIDs().then(ids => this.ids = ids);
   }
+
+  removeSeries(arrayID: number) {
+    this.story.series.splice(arrayID, 1);
+    console.log(this.story.series);
+  }
 }
 
 
