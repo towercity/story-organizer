@@ -17,3 +17,4 @@ A simple angular 2 application which organizes stories by category and series
   * Function to change ser/status when name is pressed
 * add a navbar to access many features (eg new entry)
 * Search
+* Remove ID box from edit page

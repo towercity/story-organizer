@@ -34,8 +34,7 @@ export class StoryDetailComponent implements OnInit {
       if (params['id'] !== undefined) {
         let id = +params['id'];
         this.navigated = true;
-        this.storyService.getStory(id)
-            .then(story => this.story = story);
+        this.story = this.storyService.getStory(id);
       } else {
         this.navigated = false;
         this.story = new Story();
@@ -48,11 +47,11 @@ export class StoryDetailComponent implements OnInit {
   }
 
   getIDs() {
-    this.storyService.getIDs().then(ids => this.ids = ids);
+    this.ids = this.storyService.getIDs();
   }
 
   getStories() {
-    this.storyService.getStories().then(stories => this.stories = stories);
+    this.stories = this.storyService.getStories();
   }
 
   removeSeries(arrayID: number) {
@@ -83,5 +82,9 @@ export class StoryDetailComponent implements OnInit {
   goToPage(page: string) {
     let link = ['/' + page]
     this.router.navigate(link);
+  }
+
+  saveStories() {
+    this.storyService.saveStories(this.stories);
   }
 }

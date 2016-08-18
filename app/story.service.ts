@@ -12,7 +12,7 @@ export class StoryService {
   getStories() {
     if(!this.hasStoredLocalStories) {
       console.log("Using default STORIES.");
-      return Promise.resolve(STORIES);
+      return STORIES;
 
     } else {
       var localStories = JSON.parse(localStorage["story.organizer.story.details"]);
@@ -25,7 +25,7 @@ export class StoryService {
   getIDs() {
     if(!this.hasStoredLocalIDs) {
       console.log("Using default IDS.");
-      return Promise.resolve(LIST_IDS);
+      return LIST_IDS;
 
     } else {
       var localIDs = JSON.parse(localStorage["story.organizer.story.IDs"]);
@@ -36,7 +36,17 @@ export class StoryService {
   }
 
   getStory(id: number) {
-    return this.getStories()
-               .then(stories => stories.find(story => story.id === id));
+    var stories = this.getStories();
+    return stories.find(story => story.id === id);
+  }
+
+  saveStories(storiesArray: Story[]) {
+    var stringifiedStories = JSON.stringify(storiesArray);
+    localStorage["story.organizer.story.details"] = stringifiedStories;
+  }
+
+  saveIDs(ids: any) {
+    var stringifiedIDs = JSON.stringify(ids);
+    localStorage["story.organizer.story.IDs"] = stringifiedIDs;
   }
 }

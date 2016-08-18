@@ -32,12 +32,12 @@ export class TableComponent implements OnInit {
     console.log(info);
   }
 
-  getStories() {
-    this.storyService.getStories().then(stories => this.stories = stories);
+  getIDs() {
+    this.ids = this.storyService.getIDs();
   }
 
-  getIDs() {
-    this.storyService.getIDs().then(ids => this.ids = ids);
+  getStories() {
+    this.stories = this.storyService.getStories();
   }
 
   ngOnInit() {
