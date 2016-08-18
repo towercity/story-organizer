@@ -43,11 +43,11 @@ export class NewStoryComponent implements OnInit {
   }
 
   getIDs() {
-    this.storyService.getIDs().then(ids => this.ids = ids);
+    this.ids = this.storyService.getIDs();
   }
 
   getStories() {
-    this.storyService.getStories().then(stories => this.stories = stories);
+    this.stories = this.storyService.getStories();
   }
 
   removeSeries(arrayID: number) {
@@ -63,6 +63,7 @@ export class NewStoryComponent implements OnInit {
     this.newStory.id = this.stories.length;
     this.newStory.series.push(this.newSeriesID);
     this.stories.push(this.newStory);
+    this.storyService.saveStories(this.stories);
     this.goToPage('table');
   }
 

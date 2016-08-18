@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params, Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 import { Story } from './story';
@@ -13,9 +13,10 @@ import { LIST_IDS } from './temp-stories';
   directives: [ROUTER_DIRECTIVES],
 })
 
-export class StoryDetailComponent implements OnInit {
+export class StoryDetailComponent implements OnInit, OnDestroy  {
   stories: Story[];
   story: Story;
+
   newSeriesID: number;
   navigated = false;
   ids: any = LIST_IDS;
@@ -75,6 +76,7 @@ export class StoryDetailComponent implements OnInit {
 
     //removes story by ID#
     this.stories.splice(storyID, 1);
+    this.storyService.saveStories(this.stories);
 
     this.goToPage('table');
   }

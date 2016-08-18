@@ -5,9 +5,7 @@ A simple angular 2 application which organizes stories by category and series
 # To implement
 
 * Local storage (or server storage)
-  * Store the STORIES array to local storage ("local.stories.object")
-  * for getStories functions on each page, check if its stored locally first. if so, use local array; if not, run the story service
-  * do the same for the IDS object, especially once it is made editable
+  * Change story edit page to base around a dummy story which, on the use of a save button, replaces the original story object and saves the full array to local storage
 * Option to import/export stories & ids objects to file
 * Add and remove series and statuses
 * Make stories w/o series visible on series page
