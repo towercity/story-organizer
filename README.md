@@ -5,7 +5,7 @@ A simple angular 2 application which organizes stories by category and series
 # To implement
 
 * Local storage (or server storage)
-  * Change story edit page to base around a dummy story which, on the use of a save button, replaces the original story object and saves the full array to local storage
+  * Update button appearance, remove console.logs (except whether local or not is used)
 * Option to import/export stories & ids objects to file
 * Add and remove series and statuses
 * Make stories w/o series visible on series page
@@ -16,3 +16,4 @@ A simple angular 2 application which organizes stories by category and series
 * add a navbar to access many features (eg new entry)
 * Search
 * Remove ID box from edit page
+* Remove description column in mobile view

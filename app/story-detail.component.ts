@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 import { Story } from './story';
@@ -13,12 +13,13 @@ import { LIST_IDS } from './temp-stories';
   directives: [ROUTER_DIRECTIVES],
 })
 
-export class StoryDetailComponent implements OnInit, OnDestroy  {
+export class StoryDetailComponent implements OnInit {
   stories: Story[];
+  // Separates story and displayStory to avoid auto-updating
   story: Story;
+  displayStory: Story;
 
   newSeriesID: number;
-  navigated = false;
   ids: any = LIST_IDS;
 
   constructor(
@@ -32,14 +33,9 @@ export class StoryDetailComponent implements OnInit, OnDestroy  {
     this.getStories();
 
     this.route.params.forEach((params: Params) => {
-      if (params['id'] !== undefined) {
-        let id = +params['id'];
-        this.navigated = true;
-        this.story = this.storyService.getStory(id);
-      } else {
-        this.navigated = false;
-        this.story = new Story();
-      }
+      var id = +params['id'];
+      this.story = this.storyService.getStory(id);
+      this.displayStory = this.story;
     });
   }
 
@@ -56,11 +52,11 @@ export class StoryDetailComponent implements OnInit, OnDestroy  {
   }
 
   removeSeries(arrayID: number) {
-    this.story.series.splice(arrayID, 1);
+    this.displayStory.series.splice(arrayID, 1);
   }
 
   addSeries() {
-    this.story.series.push(this.newSeriesID);
+    this.displayStory.series.push(this.newSeriesID);
     this.newSeriesID = null;
   }
 
@@ -86,7 +82,12 @@ export class StoryDetailComponent implements OnInit, OnDestroy  {
     this.router.navigate(link);
   }
 
-  saveStories() {
+  saveStory() {
+    var storyID = this.story.id;
+    this.stories[storyID] = this.displayStory;
+
     this.storyService.saveStories(this.stories);
+
+    this.goToPage('table');
   }
 }
