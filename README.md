@@ -5,6 +5,7 @@ A simple angular 2 application which organizes stories by category and series
 # To implement
 
 * Option to import/export stories & ids objects to file
+  * Eventually, move the saving of stories and IDs into one local storage variable, to make saving to disk simpler
 * Add and remove series and statuses
 * Make stories w/o series visible on series page
 * Use bootstrap dropdowns to select series and status
