@@ -63,7 +63,7 @@ export class NewStoryComponent implements OnInit {
     this.newStory.id = this.stories.length;
     this.newStory.series.push(this.newSeriesID);
     this.stories.push(this.newStory);
-    this.storyService.saveStories(this.stories);
+    this.storyService.saveStories(this.stories, this.ids);
     this.goToPage('table');
   }
 

@@ -6,8 +6,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class StoryService {
-  hasStoredLocalStories: boolean = (localStorage["story.organizer.story.details"]);
-  hasStoredLocalIDs: boolean = (localStorage["story.organizer.story.IDs"]);
+  hasStoredLocalStories: boolean = (localStorage["story.organizer.story.array"]);
 
   getStories() {
     if(!this.hasStoredLocalStories) {
@@ -15,20 +14,23 @@ export class StoryService {
       return STORIES;
 
     } else {
-      var localStories = JSON.parse(localStorage["story.organizer.story.details"]);
+      var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
+      var localStories = dataArray[0];
       console.log("Using local storage stories.");
       return localStories;
     }
   }
 
   getIDs() {
-    if(!this.hasStoredLocalIDs) {
+    if(!this.hasStoredLocalStories) {
       console.log("Using default IDS.");
       return LIST_IDS;
 
     } else {
-      var localIDs = JSON.parse(localStorage["story.organizer.story.IDs"]);
+      var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
+      var localIDs = dataArray[1];
       console.log("Using local storage IDs.");
+      return localIDs;
     }
   }
 
@@ -37,13 +39,12 @@ export class StoryService {
     return stories.find(story => story.id === id);
   }
 
-  saveStories(storiesArray: Story[]) {
-    var stringifiedStories = JSON.stringify(storiesArray);
-    localStorage["story.organizer.story.details"] = stringifiedStories;
-  }
+  saveStories(storiesArray: Story[], ids: any) {
+    var dataArray = [];
+    dataArray[0] = storiesArray;
+    dataArray[1] = ids;
 
-  saveIDs(ids: any) {
-    var stringifiedIDs = JSON.stringify(ids);
-    localStorage["story.organizer.story.IDs"] = stringifiedIDs;
+    var stringifiedArray = JSON.stringify(dataArray);
+    localStorage["story.organizer.story.array"] = stringifiedArray;
   }
 }

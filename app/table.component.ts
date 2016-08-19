@@ -46,9 +46,9 @@ export class TableComponent implements OnInit {
   }
 
   saveToDisk() {
-    this.storyService.saveStories(this.stories);
+    this.storyService.saveStories(this.stories, this.ids);
 
-    var blob = new Blob([localStorage["story.organizer.story.details"]], {type: "text/plain;charset=utf-8"});
+    var blob = new Blob([localStorage["story.organizer.story.array"]], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "story-organizer-data.txt")
   }
 }

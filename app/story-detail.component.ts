@@ -72,7 +72,7 @@ export class StoryDetailComponent implements OnInit {
 
     //removes story by ID#
     this.stories.splice(storyID, 1);
-    this.storyService.saveStories(this.stories);
+    this.storyService.saveStories(this.stories, this.ids);
 
     this.goToPage('table');
   }
@@ -86,7 +86,7 @@ export class StoryDetailComponent implements OnInit {
     var storyID = this.story.id;
     this.stories[storyID] = this.displayStory;
 
-    this.storyService.saveStories(this.stories);
+    this.storyService.saveStories(this.stories, this.ids);
 
     this.goToPage('table');
   }
