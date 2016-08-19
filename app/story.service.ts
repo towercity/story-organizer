@@ -16,8 +16,7 @@ export class StoryService {
 
     } else {
       var localStories = JSON.parse(localStorage["story.organizer.story.details"]);
-      console.log("Using local storage stories object:");
-      console.log(localStories);
+      console.log("Using local storage stories.");
       return localStories;
     }
   }
@@ -29,9 +28,7 @@ export class StoryService {
 
     } else {
       var localIDs = JSON.parse(localStorage["story.organizer.story.IDs"]);
-      console.log("Using local storage IDs object:");
-      console.log(localIDs);
-      return localIDs;
+      console.log("Using local storage IDs.");
     }
   }
 
