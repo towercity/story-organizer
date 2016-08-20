@@ -58,9 +58,12 @@ export class NewStoryComponent implements OnInit {
     this.newStory.status = id;
   }
 
-  addSeries() {
-    this.newStory.series.push(this.newSeriesID);
-    this.newSeriesID = null;
+  addSeries(newSeriesID: number) {
+    this.newStory.series.push(newSeriesID);
+  }
+
+  changeSeries(locationID: number, seriesID: number) {
+    this.newStory.series[locationID] = seriesID;
   }
 
   addStory() {

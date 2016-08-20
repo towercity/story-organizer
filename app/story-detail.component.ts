@@ -19,7 +19,6 @@ export class StoryDetailComponent implements OnInit {
   story: Story;
   displayStory: Story;
 
-  newSeriesID: number;
   ids: any = LIST_IDS;
 
   constructor(
@@ -59,9 +58,12 @@ export class StoryDetailComponent implements OnInit {
     this.displayStory.series.splice(arrayID, 1);
   }
 
-  addSeries() {
-    this.displayStory.series.push(this.newSeriesID);
-    this.newSeriesID = null;
+  addSeries(newSeriesID: number) {
+    this.displayStory.series.push(newSeriesID);
+  }
+
+  changeSeries(locationID: number, seriesID: number) {
+    this.displayStory.series[locationID] = seriesID;
   }
 
   removeStory() {
