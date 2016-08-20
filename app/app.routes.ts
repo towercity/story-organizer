@@ -5,6 +5,7 @@ import { StatusListComponent } from './status-list.component';
 import { TableComponent } from './table.component';
 import { StoryDetailComponent } from './story-detail.component';
 import { NewStoryComponent } from './new-story.component';
+import { UploadFile } from './upload-file.component';
 
 const routes: RouterConfig = [
   {
@@ -31,6 +32,10 @@ const routes: RouterConfig = [
   {
     path: 'new-story',
     component: NewStoryComponent
+  },
+  {
+    path: 'upload-file',
+    component: UploadFile
   }
 ];
 

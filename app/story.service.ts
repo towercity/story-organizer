@@ -47,4 +47,12 @@ export class StoryService {
     var stringifiedArray = JSON.stringify(dataArray);
     localStorage["story.organizer.story.array"] = stringifiedArray;
   }
+
+  loadStories(uploadFile: string) {
+    var dataArray = JSON.parse(uploadFile);
+    var stories = dataArray[0];
+    var ids = dataArray[1];
+
+    this.saveStories(stories, ids);
+  }
 }
