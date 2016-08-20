@@ -51,6 +51,10 @@ export class StoryDetailComponent implements OnInit {
     this.stories = this.storyService.getStories();
   }
 
+  changeStatus(id: number) {
+    this.displayStory.status = id;
+  }
+
   removeSeries(arrayID: number) {
     this.displayStory.series.splice(arrayID, 1);
   }

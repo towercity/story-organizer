@@ -54,6 +54,10 @@ export class NewStoryComponent implements OnInit {
     this.newStory.series.splice(arrayID, 1);
   }
 
+  changeStatus(id: number) {
+    this.newStory.status = id;
+  }
+
   addSeries() {
     this.newStory.series.push(this.newSeriesID);
     this.newSeriesID = null;

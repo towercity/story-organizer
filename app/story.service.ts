@@ -16,7 +16,6 @@ export class StoryService {
     } else {
       var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
       var localStories = dataArray[0];
-      console.log("Using local storage stories.");
       return localStories;
     }
   }
@@ -29,7 +28,6 @@ export class StoryService {
     } else {
       var dataArray = JSON.parse(localStorage["story.organizer.story.array"]);
       var localIDs = dataArray[1];
-      console.log("Using local storage IDs.");
       return localIDs;
     }
   }
