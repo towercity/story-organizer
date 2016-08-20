@@ -31,7 +31,7 @@
           <label for="series">Series:</label>
           <div class="form-group">
             <span *ngFor="let ser of newStory.series; let idx = index">
-              <div class="dropdown">
+              <div class="dropdown series-dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
                   {{ids.series[ser]}}
                   <span class="caret"></span>
@@ -48,7 +48,7 @@
               </div>
             </span>
 
-            <div class="dropdown">
+            <div class="dropdown series-dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="btn btn-default">
                 Add New Series
                 <span class="caret"></span>
