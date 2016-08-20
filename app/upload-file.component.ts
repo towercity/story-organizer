@@ -10,7 +10,7 @@ import { StoryService } from './story.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [StoryService]
 })
-export class UploadFile {
+export class UploadFileComponent {
 
   constructor(
     private router: Router,
@@ -40,7 +40,7 @@ export class UploadFile {
       })(file, this);
 
       reader.readAsText(file);
-      
+
     } else {
       console.log("no file");
     }
