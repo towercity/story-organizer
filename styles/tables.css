@@ -18,7 +18,7 @@
   width: 62%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 560px) {
   .table-desc {
     display: none;
   }
