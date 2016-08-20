@@ -1,31 +1,42 @@
 <div class="app-wrapper">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">View <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a (click)="goToPage('table')">
+                View All
+              </a></li>
+              <li><a (click)="goToPage('status')">
+                View by Status
+              </a></li>
+              <li><a (click)="goToPage('series')">
+                View by Series
+              </a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a (click)="goToPage('new-story')">
+            Add New Story
+          </a></li>
+          <li><a (click)="saveToDisk()">
+            Save to Disk
+          </a></li>
+          <li><a (click)="goToPage('upload-file')">
+            Upload Story Data
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div class="page-header">
     <h1 class="text-center">{{title}} <small>by {{author}}</small></h1>
   </div>
 
   <router-outlet></router-outlet>
-
-  <div class="btn-group btn-group-justified bottom-buttons">
-    <a (click)="goToPage('table')" class="btn btn-default">
-      View All
-    </a>
-    <a (click)="goToPage('status')" class="btn btn-default">
-      View by Status
-    </a>
-    <a (click)="goToPage('series')" class="btn btn-default">
-      View by Series
-    </a>
-  </div>
-
-  <div class="btn-group btn-group-justified bottom-buttons">
-    <a (click)="goToPage('new-story')" class="btn btn-default">
-      Add New Story
-    </a>
-    <a (click)="saveToDisk()" class="btn btn-default">
-      Save to Disk
-    </a>
-    <a (click)="goToPage('upload-file')" class="btn btn-default">
-      Upload Story Data
-    </a>
-  </div>
 </div>
