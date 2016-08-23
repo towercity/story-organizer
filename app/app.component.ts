@@ -31,7 +31,6 @@ export class AppComponent {
     var ids = this.storyService.getIDs();
     this.storyService.saveStories(stories, ids);
 
-    var blob = new Blob([localStorage["story.organizer.story.array"]], {type: "text/plain;charset=utf-8"});
     saveAs(blob, "story-organizer-data.sod")
   }
 }
