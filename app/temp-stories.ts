@@ -39,7 +39,7 @@ export var LIST_IDS: any = {
     "To-write"
   ],
   series: [
-    "In Search od Lost Time",
+    "In Search of Lost Time",
 	"Neapolitian Novels"
   ]
 }
