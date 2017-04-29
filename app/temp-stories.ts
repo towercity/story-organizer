@@ -4,31 +4,31 @@ import { Story } from './story';
 export var STORIES: Story[] = [
   {
     id: 0,
-    title: 'Lipstick Livery',
-    desc: 'A meditation on life in New York City at 25',
-    status: 1,
-    series: [2]
-  },
-  {
-    id: 1,
-    title: 'Dick Van Dyke Gets Married',
-    desc: "A retelling of an episode of the Dick Van Dyke show using characters from Greek myth",
+    title: 'Moby Dick',
+    desc: 'An angry man searches the sea for a white whale',
     status: 1,
     series: []
   },
   {
+    id: 1,
+    title: 'Swann in Love',
+    desc: "Swann falls in love with Odette, who's not even his type",
+    status: 1,
+    series: [0]
+  },
+  {
     id: 2,
-    title: 'Bermuda Triangle',
-    desc: 'A lost sailor reflects on life in Carolina',
+    title: 'Ulysses',
+    desc: 'A couple of people wander Dublin for a while',
     status: 0,
-    series: [1]
+    series: []
   },
   {
     id: 3,
-    title: 'Boilerplate',
-    desc: 'A code-monkey reflects on the use of copy-paste',
+    title: 'My Brilliant Friend',
+    desc: 'Two friends grow up with each other and, occasionally, get jealous fo each other',
     status: 2,
-    series: [0]
+    series: [1]
   }
 ];
 
@@ -39,8 +39,7 @@ export var LIST_IDS: any = {
     "To-write"
   ],
   series: [
-    "Defiance Ohio",
-    "Life in America",
-    "Moby Dick: The College Years"
+    "In Search od Lost Time",
+	"Neapolitian Novels"
   ]
 }
